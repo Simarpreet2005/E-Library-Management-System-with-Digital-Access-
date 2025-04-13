@@ -97,10 +97,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 if (empty($name) || $price === false || empty($description)) {
                     $error = "All fields are required and price must be a number";
-                } else {
+                }
+                else {
                     if ($book->addBook($name, $price, $description)) {
                         $message = "Book added successfully";
-                    } else {
+                    } 
+                    else {
                         $error = "Error adding book";
                     }
                 }
@@ -110,6 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $bookId = filter_input(INPUT_POST, 'book_id', FILTER_VALIDATE_INT);
                 if ($bookId) {
                     $book = new Book($pdo, $bookId);
+                   
                     if ($book->deleteBook()) {
                         $message = "Book deleted successfully";
                     } else {
