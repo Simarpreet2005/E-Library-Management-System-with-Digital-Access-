@@ -1,0 +1,199 @@
+/* Sliding Panel Styles */
+.panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.sliding-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    transition: right 0.3s ease-in-out;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.sliding-panel.open {
+    right: 0;
+}
+
+.panel-open {
+    overflow: hidden;
+}
+
+/* Book Card Styles */
+.book-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+    border: 1px solid var(--accent-color);
+}
+
+.book-card .book-cover {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.book-card .book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+.book-card .book-info {
+    padding: 1.5rem;
+}
+
+.book-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-accent);
+}
+
+.book-card .author {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.book-card .description {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.book-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.book-actions button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+.wishlist-btn {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.borrow-btn {
+    background-color: var(--light-accent);
+    color: var(--text-color);
+}
+
+.wishlist-btn:hover, .borrow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wishlist-btn.active, .borrow-btn.active {
+    transform: scale(0.95);
+}
+
+/* Reading Time Counter Styles */
+.reading-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    border: 1px solid var(--accent-color);
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.reading-time i {
+    color: var(--light-accent);
+}
+
+.reading-time .time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Gradient Background Styles */
+.gradient-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--dark-accent), var(--accent-color), var(--dark-accent));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sliding-panel {
+        width: 100%;
+        right: -100%;
+    }
+
+    .book-card {
+        margin-bottom: 1rem;
+    }
+
+    .book-actions {
+        flex-direction: column;
+    }
+
+    .reading-time {
+        bottom: 1rem;
+        right: 1rem;
+    }
+} 

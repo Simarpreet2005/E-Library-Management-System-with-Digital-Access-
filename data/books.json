@@ -1,0 +1,54 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "description": "A story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan.",
+            "cover_image": "assets/images/books/great-gatsby.jpg",
+            "category": "Classic Literature",
+            "pages": 180,
+            "published_year": 1925
+        },
+        {
+            "id": 2,
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "description": "The story of racial injustice and the loss of innocence in the American South.",
+            "cover_image": "assets/images/books/mockingbird.jpg",
+            "category": "Classic Literature",
+            "pages": 281,
+            "published_year": 1960
+        },
+        {
+            "id": 3,
+            "title": "1984",
+            "author": "George Orwell",
+            "description": "A dystopian social science fiction novel and cautionary tale.",
+            "cover_image": "assets/images/books/1984.jpg",
+            "category": "Science Fiction",
+            "pages": 328,
+            "published_year": 1949
+        },
+        {
+            "id": 4,
+            "title": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "description": "A romantic novel of manners that follows the emotional development of Elizabeth Bennet.",
+            "cover_image": "assets/images/books/pride-prejudice.jpg",
+            "category": "Romance",
+            "pages": 432,
+            "published_year": 1813
+        },
+        {
+            "id": 5,
+            "title": "The Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "description": "The story of teenage alienation and loss of innocence.",
+            "cover_image": "assets/images/books/catcher-rye.jpg",
+            "category": "Coming of Age",
+            "pages": 234,
+            "published_year": 1951
+        }
+    ]
+} 
