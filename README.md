@@ -124,6 +124,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Suricha Sinha - [GitHub](https://github.com/SurichaSinha)
+Simarpreet Kaur - [GitHub](https://github.com/Simarpreet2005)
+Project Link - [Project Link](https://github.com/Simarpreet2005/E-Library-Management-System-with-Digital-Access-)
 
-Project Link: [https://github.com/SurichaSinha/E-Library-Management-System](https://github.com/SurichaSinha/E-Library-Management-System) 
+
+
